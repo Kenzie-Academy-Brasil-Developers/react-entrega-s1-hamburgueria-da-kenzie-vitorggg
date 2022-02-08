@@ -1,0 +1,92 @@
+.prod-cards {
+  width: 300px;
+  height: 346px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  background: #ffffff;
+  border: 2px solid #e0e0e0;
+  box-sizing: border-box;
+  border-radius: 5px;
+
+  margin: 32px 20px 12px 0px;
+}
+
+.prod-cards figure {
+  width: 100%;
+  height: 150px;
+
+  background: #f5f5f5;
+}
+
+.prod-cards h3 {
+  width: 260px;
+  height: 40px;
+
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: left;
+  color: #333333;
+
+  margin: 26.67px 19px 0px 22px;
+}
+
+.prod-cards span {
+  width: 260px;
+  height: 16px;
+
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: start;
+  color: #828282;
+
+  margin: 6px 18px 0px 22px;
+}
+
+.prod-cards p {
+  width: 240px;
+  height: 24px;
+
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: start;
+  line-height: 24px;
+  color: #27ae60;
+
+  margin: 10px 18px 14px 22px;
+}
+
+.button-product {
+  width: 107px;
+  height: 40px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 20px;
+
+  background: #27ae60;
+  border: 2px solid #27ae60;
+  box-sizing: border-box;
+  border-radius: 8px;
+
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+
+  margin: 0px 0px 23px 20px;
+}

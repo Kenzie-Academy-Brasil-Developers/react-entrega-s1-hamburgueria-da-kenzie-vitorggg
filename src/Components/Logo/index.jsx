@@ -1,9 +1,10 @@
-// import "./Mask Group.png";
+import "./index.css";
+import logo from "./logo.png";
 
 const Logo = () => {
   return (
     <>
-      <img alt="logo" src="./Mask Group" />
+      <img className="imgLogo" alt="logo" src={logo} />
     </>
   );
 };
