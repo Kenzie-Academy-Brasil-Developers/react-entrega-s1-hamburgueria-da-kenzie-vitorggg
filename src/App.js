@@ -1,5 +1,9 @@
 import "./App.css";
 import { useState, useEffect } from "react";
+import Button from "./Components/Button";
+import InputSearch from "./Components/InputSearch";
+import Logo from "./Components/Logo";
+import Header from "./Components/Header";
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -18,7 +22,7 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header"></header>
+      <Header />
     </div>
   );
 }
