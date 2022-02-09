@@ -75,3 +75,9 @@
     margin-right: 20px;
   }
 }
+
+@media only screen and (min-width: 1024px) {
+  .cart-panel {
+    width: 320px;
+  }
+}

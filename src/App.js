@@ -26,8 +26,12 @@ function App() {
     <div className="App">
       <Header />
       <main>
-        <ProductList products={products} />
-        <Cart currentSale={currentSale} setCurrentSale={setCurrentSale} />
+        <section className="app-section">
+          <ProductList products={products} />
+        </section>
+        <aside>
+          <Cart currentSale={currentSale} setCurrentSale={setCurrentSale} />
+        </aside>
       </main>
     </div>
   );
