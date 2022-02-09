@@ -24,13 +24,20 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
+      <Header
+        filteredProducts={filteredProducts}
+        setFilteredProducts={setFilteredProducts}
+        products={products}
+      />
       <main>
         <section className="app-section">
-          <ProductList products={products} />
+          <ProductList
+            products={products}
+            filteredProducts={filteredProducts}
+          />
         </section>
         <aside>
-          <Cart currentSale={currentSale} setCurrentSale={setCurrentSale} />
+          <Cart />
         </aside>
       </main>
     </div>

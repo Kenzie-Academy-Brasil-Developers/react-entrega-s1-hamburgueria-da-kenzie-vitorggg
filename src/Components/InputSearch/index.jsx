@@ -1,11 +1,34 @@
 import "./index.css";
+import { useState } from "react";
 import Button from "../Button";
 
-const InputSearch = () => {
+const InputSearch = ({ setFilteredProducts, products }) => {
+  const [typedSearch, setTypedSearch] = useState("");
+
+  function showProducts(value) {
+    setFilteredProducts(
+      products.filter((elem) => {
+        return (
+          elem.name.toLowerCase().includes(value.toLowerCase()) ||
+          elem.category.toLowerCase().includes(value.toLowerCase())
+        );
+      })
+    );
+  }
+
   return (
     <div className="searchBar">
-      <input placeholder="Digitar pesquisa" />
-      <Button className="button-search">Pesquisar</Button>
+      <input
+        onChange={(e) => showProducts(e.target.value)}
+        placeholder="Digitar pesquisa"
+        type="text"
+      />
+      <Button
+        // onClick={() => showProducts(typedSearch)}
+        className="button-search"
+      >
+        Pesquisar
+      </Button>
     </div>
   );
 };
