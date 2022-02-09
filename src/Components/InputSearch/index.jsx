@@ -7,10 +7,10 @@ const InputSearch = ({ setFilteredProducts, products }) => {
 
   function showProducts(value) {
     setFilteredProducts(
-      products.filter((elem) => {
+      products.filter((item) => {
         return (
-          elem.name.toLowerCase().includes(value.toLowerCase()) ||
-          elem.category.toLowerCase().includes(value.toLowerCase())
+          item.name.toLowerCase().includes(value.toLowerCase()) ||
+          item.category.toLowerCase().includes(value.toLowerCase())
         );
       })
     );

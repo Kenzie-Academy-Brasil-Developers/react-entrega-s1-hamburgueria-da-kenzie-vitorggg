@@ -1,7 +1,21 @@
 import "./index.css";
 import Button from "../Button";
 
-const Product = ({ name, category, price, img }) => {
+const Product = ({
+  name,
+  category,
+  price,
+  img,
+  prod,
+  currentSale,
+  setCurrentSale,
+}) => {
+  const addCart = (value) => {
+    if (!currentSale.includes(value)) {
+      setCurrentSale([...currentSale, value]);
+    }
+  };
+
   const fixedPrice = () => {
     let priceInitial = Number(price);
     return priceInitial.toFixed(2);
@@ -15,7 +29,9 @@ const Product = ({ name, category, price, img }) => {
       <h3>{name}</h3>
       <span>{category}</span>
       <p>{"R$ " + fixedPrice()}</p>
-      <Button className="button-product">Adicionar</Button>
+      <Button onClick={() => addCart(prod)} className="button-product">
+        Adicionar
+      </Button>
     </div>
   );
 };

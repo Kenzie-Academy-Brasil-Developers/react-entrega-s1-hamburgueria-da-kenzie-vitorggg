@@ -1,7 +1,12 @@
 import "./index.css";
 import Product from "../Product";
 
-const ProductList = ({ products, filteredProducts }) => {
+const ProductList = ({
+  products,
+  filteredProducts,
+  setCurrentSale,
+  currentSale,
+}) => {
   return (
     <ul className="vitrine-list">
       {filteredProducts.length === 0
@@ -12,6 +17,9 @@ const ProductList = ({ products, filteredProducts }) => {
                 category={prod.category}
                 price={prod.price}
                 img={prod.img}
+                prod={prod}
+                currentSale={currentSale}
+                setCurrentSale={setCurrentSale}
               />
             </li>
           ))
@@ -22,6 +30,9 @@ const ProductList = ({ products, filteredProducts }) => {
                 category={prod.category}
                 price={prod.price}
                 img={prod.img}
+                prod={prod}
+                currentSale={currentSale}
+                setCurrentSale={setCurrentSale}
               />
             </li>
           ))}
