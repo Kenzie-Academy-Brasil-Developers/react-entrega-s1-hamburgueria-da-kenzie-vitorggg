@@ -1,7 +1,15 @@
 .vitrine-list {
   display: flex;
+  align-items: center;
 
   list-style: none;
 
   margin: 0px 0px 0px 20px;
+}
+
+@media only screen and (min-width: 500px) {
+  .vitrine-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }

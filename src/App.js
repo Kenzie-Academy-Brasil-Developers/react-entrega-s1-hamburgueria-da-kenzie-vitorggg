@@ -7,6 +7,7 @@ import Logo from "./Components/Logo";
 import Header from "./Components/Header";
 import Product from "./Components/Product";
 import ProductList from "./Components/ProductList";
+import Cart from "./Components/Cart";
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -18,19 +19,15 @@ function App() {
     fetch(`https://hamburgueria-kenzie-json-serve.herokuapp.com/products`)
       .then((response) => response.json())
       .then((response) => setProducts(response))
-      .catch((err) => console.log(err));
+      .catch((err) => alert(err));
   }, []);
-
-  console.log(products);
 
   return (
     <div className="App">
       <Header />
       <main>
-        <section>
-          <ProductList products={products} />
-        </section>
-        <aside></aside>
+        <ProductList products={products} />
+        <Cart currentSale={currentSale} setCurrentSale={setCurrentSale} />
       </main>
     </div>
   );

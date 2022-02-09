@@ -5,8 +5,12 @@ import Logo from "../Logo";
 const Header = () => {
   return (
     <header className="app-header">
-      <Logo />
-      <InputSearch />
+      <div className="logo">
+        <Logo />
+      </div>
+      <div className="logo">
+        <InputSearch />
+      </div>
     </header>
   );
 };
