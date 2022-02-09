@@ -8,6 +8,7 @@ import Header from "./Components/Header";
 import Product from "./Components/Product";
 import ProductList from "./Components/ProductList";
 import Cart from "./Components/Cart";
+import CartProduct from "./Components/CartProduct";
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -41,7 +42,7 @@ function App() {
           />
         </section>
         <aside>
-          <Cart />
+          <Cart currentSale={currentSale} />
         </aside>
       </main>
     </div>

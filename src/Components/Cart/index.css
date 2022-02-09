@@ -70,9 +70,20 @@
   margin: 0px 10px 44px 10px;
 }
 
+.cart-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 10px;
+
+  background: #f5f5f5;
+  border-radius: 0px 0px 5px 5px;
+}
+
 @media only screen and (min-width: 970px) {
   .cart-panel {
-    margin-right: 20px;
+    margin-right: 80px;
   }
 }
 
