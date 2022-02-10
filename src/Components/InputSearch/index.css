@@ -27,6 +27,10 @@ input {
   color: #e0e0e0;
 }
 
+input:hover {
+  border: 2px solid #333333;
+}
+
 .button-search {
   width: 107px;
   height: 40px;
@@ -50,4 +54,10 @@ input {
   color: #ffffff;
 
   margin: 10px 0 10px -115px;
+}
+
+.button-search:hover {
+  background: #93d7af;
+  border: 2px solid #93d7af;
+  cursor: pointer;
 }

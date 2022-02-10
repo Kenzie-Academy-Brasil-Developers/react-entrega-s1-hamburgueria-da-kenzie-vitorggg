@@ -74,3 +74,9 @@
 
   margin: 13px 10px 0px 0px;
 }
+
+.cart-prod-button:hover {
+  text-decoration-line: underline;
+  color: #333333;
+  cursor: pointer;
+}

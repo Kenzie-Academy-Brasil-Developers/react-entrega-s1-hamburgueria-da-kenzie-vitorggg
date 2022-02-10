@@ -2,7 +2,7 @@
   width: 365px;
   height: 223px;
 
-  margin: 32px 0px 0px 20px;
+  margin: 32px 40px 0px 0px;
 }
 
 .cart-title {
@@ -144,6 +144,13 @@
   font-size: 16px;
   line-height: 19px;
   color: #828282;
+}
+
+.button-remove-all:hover {
+  background: #828282;
+  border: 2px solid #828282;
+  color: #e0e0e0;
+  cursor: pointer;
 }
 
 @media only screen and (min-width: 970px) {

@@ -1,5 +1,4 @@
 import "./index.css";
-import { useState } from "react";
 import Button from "../Button";
 
 const Product = ({
