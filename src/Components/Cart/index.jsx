@@ -3,7 +3,7 @@ import { useState } from "react";
 import CartProduct from "../CartProduct";
 import Button from "../Button";
 
-const Cart = ({ currentSale, setCurrentSale, cartTotal }) => {
+const Cart = ({ currentSale, setCurrentSale, cartTotal, setCartTotal }) => {
   const resetCart = () => {
     setCurrentSale([]);
   };
@@ -28,6 +28,11 @@ const Cart = ({ currentSale, setCurrentSale, cartTotal }) => {
                   category={prod.category}
                   price={prod.price}
                   img={prod.img}
+                  prod={prod}
+                  currentSale={currentSale}
+                  setCurrentSale={setCurrentSale}
+                  cartTotal={cartTotal}
+                  setCartTotal={setCartTotal}
                 />
               </li>
             ))}

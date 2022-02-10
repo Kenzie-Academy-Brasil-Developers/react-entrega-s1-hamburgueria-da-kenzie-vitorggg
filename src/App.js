@@ -46,6 +46,7 @@ function App() {
             currentSale={currentSale}
             setCurrentSale={setCurrentSale}
             cartTotal={cartTotal}
+            setCartTotal={setCartTotal}
           />
         </aside>
       </main>

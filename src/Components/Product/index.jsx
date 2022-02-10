@@ -13,8 +13,6 @@ const Product = ({
   cartTotal,
   setCartTotal,
 }) => {
-  console.log(cartTotal);
-
   const totalAmount = (value) => {
     setCartTotal(
       Number(
