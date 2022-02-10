@@ -1,7 +1,13 @@
 import "./index.css";
+import { useState } from "react";
 import CartProduct from "../CartProduct";
+import Button from "../Button";
 
-const Cart = ({ currentSale, setCurrentSale }) => {
+const Cart = ({ currentSale, setCurrentSale, cartTotal }) => {
+  const resetCart = () => {
+    setCurrentSale([]);
+  };
+
   return (
     <section className="cart-panel">
       <div className="cart-title">
@@ -26,7 +32,15 @@ const Cart = ({ currentSale, setCurrentSale }) => {
               </li>
             ))}
           </ul>
-          <div></div>
+          <div className="cart-footer">
+            <div>
+              <p>Total</p>
+              <span>R$ {String(cartTotal).replace(".", ",")}</span>
+            </div>
+            <Button onClick={resetCart} className="button-remove-all">
+              Remover todos
+            </Button>
+          </div>
         </>
       )}
     </section>

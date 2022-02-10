@@ -6,6 +6,8 @@ const ProductList = ({
   filteredProducts,
   setCurrentSale,
   currentSale,
+  cartTotal,
+  setCartTotal,
 }) => {
   return (
     <ul className="vitrine-list">
@@ -20,6 +22,8 @@ const ProductList = ({
                 prod={prod}
                 currentSale={currentSale}
                 setCurrentSale={setCurrentSale}
+                cartTotal={cartTotal}
+                setCartTotal={setCartTotal}
               />
             </li>
           ))
@@ -33,6 +37,8 @@ const ProductList = ({
                 prod={prod}
                 currentSale={currentSale}
                 setCurrentSale={setCurrentSale}
+                cartTotal={cartTotal}
+                setCartTotal={setCartTotal}
               />
             </li>
           ))}

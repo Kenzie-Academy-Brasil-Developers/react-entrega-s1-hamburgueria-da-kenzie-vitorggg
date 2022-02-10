@@ -23,8 +23,6 @@ function App() {
       .catch((err) => alert(err));
   }, []);
 
-  console.log(currentSale);
-
   return (
     <div className="App">
       <Header
@@ -39,10 +37,16 @@ function App() {
             filteredProducts={filteredProducts}
             currentSale={currentSale}
             setCurrentSale={setCurrentSale}
+            cartTotal={cartTotal}
+            setCartTotal={setCartTotal}
           />
         </section>
         <aside>
-          <Cart currentSale={currentSale} />
+          <Cart
+            currentSale={currentSale}
+            setCurrentSale={setCurrentSale}
+            cartTotal={cartTotal}
+          />
         </aside>
       </main>
     </div>

@@ -1,4 +1,5 @@
 import "./index.css";
+import { useState } from "react";
 import Button from "../Button";
 
 const Product = ({
@@ -9,10 +10,32 @@ const Product = ({
   prod,
   currentSale,
   setCurrentSale,
+  cartTotal,
+  setCartTotal,
 }) => {
+  console.log(cartTotal);
+
+  const totalAmount = (value) => {
+    setCartTotal(
+      Number(
+        currentSale.reduce(
+          (accumulator, currentValue) => accumulator + currentValue.price,
+          value.price
+        )
+      ).toFixed(2)
+    );
+  };
+
   const addCart = (value) => {
     if (!currentSale.includes(value)) {
       setCurrentSale([...currentSale, value]);
+    }
+  };
+
+  const upadatingCart = (value) => {
+    addCart(value);
+    if (!currentSale.includes(value)) {
+      totalAmount(value);
     }
   };
 
@@ -29,7 +52,7 @@ const Product = ({
       <h3>{name}</h3>
       <span>{category}</span>
       <p>{"R$ " + fixedPrice()}</p>
-      <Button onClick={() => addCart(prod)} className="button-product">
+      <Button onClick={() => upadatingCart(prod)} className="button-product">
         Adicionar
       </Button>
     </div>
